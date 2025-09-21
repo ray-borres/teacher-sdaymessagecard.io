@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Teacher's Day Tribute</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet" />
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- Floating paper airplane -->
+    <div class="paper-airplane" aria-hidden="true">✈️</div>
+
+    <!-- Floating stars -->
+    <div class="star" style="top: 15%; left: 10%; animation-delay: 0s;">⭐</div>
+    <div class="star" style="top: 30%; left: 20%; animation-delay: 1s;">⭐</div>
+    <div class="star" style="top: 20%; left: 80%; animation-delay: 0.5s;">⭐</div>
+
+    <!-- Quote bubbles -->
+    <div class="quote-bubble" style="top: 35%; left: 70%;">“Thank you for inspiring us!”</div>
+    <div class="quote-bubble" style="top: 55%; left: 15%;">“Your lessons last forever.”</div>
+
+    <!-- Main card -->
+    <div class="card" role="main" aria-label="Teacher's Day message">
+        <pre class="text" id="typed-text" aria-live="polite"></pre>
+    </div>
+
+    <!-- Magic cursor -->
+    <div class="magic-cursor" aria-hidden="true">💖</div>
+
+    <!-- Classroom objects -->
+    <div class="classroom" aria-hidden="true">
+        <div class="chalkboard" title="Chalkboard (click me)" role="button" tabindex="0"></div>
+        <div class="desk" title="Desk"></div>
+        <div class="desk" title="Desk"></div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls" aria-label="Animation and background controls">
+        <div class="control-group">
+            <span>Speed:</span>
+            <button class="speed-btn active" onclick="setSpeed(80)" aria-pressed="true">Normal</button>
+            <button class="speed-btn" onclick="setSpeed(150)" aria-pressed="false">Slow</button>
+            <button class="speed-btn" onclick="setSpeed(40)" aria-pressed="false">Fast</button>
+        </div>
+        <div class="control-group">
+            <span>Mode:</span>
+            <button class="mode-btn active" onclick="setMode('rainbow')" aria-pressed="true">Rainbow</button>
+            <button class="mode-btn" onclick="setMode('simple')" aria-pressed="false">Simple</button>
+        </div>
+        <div class="control-group">
+            <span>Background:</span>
+            <button class="bg-btn active" onclick="setBgColor('gradient')" aria-pressed="true">Gradient</button>
+            <button class="bg-btn" onclick="setBgColor('#fff5e1')" aria-pressed="false">Cream</button>
+            <button class="bg-btn" onclick="setBgColor('#e8f5e9')" aria-pressed="false">Light Green</button>
+        </div>
+    </div>
+
+    <!-- Reset -->
+    <button class="reset-btn" aria-label="Reset animation" onclick="resetAnimation()">Reset</button>
+
+    <!-- Hidden Easter Egg Message -->
+    <div class="hidden-message" id="hiddenMessage" role="alert" aria-live="assertive">
+        🎉 Surprise! You found the secret message! Thank you for being an awesome teacher! 🎉
+    </div>
+
+    <!-- Link to external JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
